@@ -1,9 +1,7 @@
 import streamlit as st
 import pickle
 import requests
-from PIL import Image
-logo = Image.open("my photo.jpeg")
-st.logo(logo,size='large',link='https://www.linkedin.com/in/udayan-amipara-637b21324/')
+st.logo("my photo.jpeg",size='large',link='https://www.linkedin.com/in/udayan-amipara-637b21324/')
 st.sidebar.header('Movie Recommendation System')
 #add text in slidebar
 st.sidebar.space('medium')
