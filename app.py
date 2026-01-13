@@ -1,7 +1,9 @@
 import streamlit as st
 import pickle
 import requests
-st.logo("C:\\Users\\udaya\\OneDrive\\Desktop\\my photo.jpeg",size='large',link='https://www.linkedin.com/in/udayan-amipara-637b21324/')
+from PIL import Image
+logo = Image.open("my photo.jpeg")
+st.logo(logo,size='large',link='https://www.linkedin.com/in/udayan-amipara-637b21324/')
 st.sidebar.header('Movie Recommendation System')
 #add text in slidebar
 st.sidebar.space('medium')
@@ -17,7 +19,6 @@ st.sidebar.write("LinkedIn: <a href='https://www.linkedin.com/in/udayan-amipara-
 st.title("Movie Recommendation System")
 movies  = pickle.load(open('movies.pkl','rb'))
 similarity_mat  = pickle.load(open('similarity.pkl','rb'))
-print(movies.columns)
 def recommend(movie):
     movie_index = movies[movies['title'] == movie].index[0]
     distances = similarity_mat[movie_index]
