@@ -15,7 +15,11 @@ st.sidebar.write("LinkedIn: <a href='https://www.linkedin.com/in/udayan-amipara-
 
 st.title("Movie Recommendation System")
 movies  = pickle.load(open('movies.pkl','rb'))
-similarity_mat  = pickle.load(open('similarity.pkl','rb'))
+from sklearn.feature_extraction.text import CountVectorizer
+cv = CountVectorizer(max_features = 5000,stop_words = 'english')
+vec = cv.fit_transform(movies['tags']).toarray()
+from sklearn.metrics.pairwise import cosine_similarity
+similarity_mat = cosine_similarity(vec)
 def recommend(movie):
     movie_index = movies[movies['title'] == movie].index[0]
     distances = similarity_mat[movie_index]
