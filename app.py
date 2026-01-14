@@ -3,6 +3,7 @@ import pickle
 import requests
 st.sidebar.header('Movie Recommendation System')
 #add text in slidebar
+st.logo('my_photo.jpeg',size="large")
 st.sidebar.space('medium')
 st.sidebar.write("This the Content Based Movie Recommendation System made with Tag similarity matching")
 #contect information on sidebar
