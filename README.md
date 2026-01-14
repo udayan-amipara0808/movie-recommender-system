@@ -12,7 +12,7 @@ A content-based Movie Recommendation Web App built using **Machine Learning** an
 
  2.Content-based filtering using cosine similarity
 
- 3.Fetches movie posters from TMDB API
+ 3.Fetches movie posters from TMDB POSTER_PATH
 
  4.Fast & interactive UI using Streamlit
 
@@ -48,11 +48,14 @@ A content-based Movie Recommendation Web App built using **Machine Learning** an
 
 ### Installation & Setup (Local)
 git clone https://github.com/your-username/movie-recommender-system.git
+
 cd movie-recommender-system
+
 pip install -r requirements.txt
 
 ## Dataset Info:
 Movie dataset sourced from TMDB / Kaggle
+
 Preprocessed before training
 **Link**: [https://www.kaggle.com/datasets/sakshisemalti/movies-dataset-with-posters](https://www.kaggle.com/datasets/sakshisemalti/movies-dataset-with-posters)
 
@@ -62,5 +65,7 @@ Contributions are welcome!
 ### Acknowledgements
 
 1.TMDB API
+
 2.Streamlit Community
+
 3.Scikit-learn Documentation
